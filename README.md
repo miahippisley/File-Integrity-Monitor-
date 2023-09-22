@@ -10,7 +10,8 @@ File integrity monitoring (FIM) is a technology that monitors and analyses the i
 A hash value is a numeric value that uniquely identifies data, and any time the data is changed, the hash value changes too. A File Integrity Monitor stores a baseline of hash values for a particular data set, and then continuously monitors the data set to check if the hash values have been altered, which signifies the data has been corrupted. 
 <br/>
 <br/>
-To build this, we need to install PowerShell:
+This project was inspired by Josh Madakor's youtube video, check out his youtube channel for cyber security related content.
+<br/>
 <br/>
 
 <h2>Installing PowerShell</h2>
@@ -65,7 +66,6 @@ winget install --id Microsoft.Powershell --source winget
 winget install --id Microsoft.Powershell.Preview --source winget
 ```
 <br/>
-<br/>
 <b>On Ubuntu:</b>
 <br/>
 <br/>
@@ -80,17 +80,36 @@ Once installed, you can install PowerShell with:
 ```
 snap install powershell --classic
 ```
-
 Once installed, connect to PowerShell using the `pwsh` command.
-
-
-Open the command line and run the `pwsh` command to start PowerShell. Paste in the source code attached. 
 <br/>
 <br/>
+<h2>Running the Script</h2>
+
+Open the command line and run the `pwsh` command to start PowerShell.
+<br/>
+<br/>
+Powershell scripts use the '.ps1' extension. Navigate to the desktop and then use a text editor to create the script file:
+
+```
+cd desktop
+```
+
+```
+Vim fim.ps1
+```
+
+Paste in the source code attached. 
+<br/>
+<br/>
+To run the script, using PowerShell, type `./fim.ps1`  into the command line. 
+
+
 If one selects A, collect new baseline, the programme will go into the files folder, examine all of the text files, and store the file path and file hashes of each text file in a baseline called 'baseline.txt'.
 <br/>
 <br/>
 After creating the baseline, selecting B instructs the programme to begin continuously monitoring the files within the saved baseline. Each loop, the FIM takes the hashes for the baseline created, calculates the hashes for the files, and determines if there is a difference. If the integrity of the files has been compromised, because data has been added, removed, or modified, the FIM sends an alert.
 
-
+<br/>
+<br/>
+<img width="474" alt="image" src="https://github.com/miahippisley/File-Integrity-Monitor-/assets/127256439/08edca5d-faeb-4f98-b35b-5d8c43619907">
 
