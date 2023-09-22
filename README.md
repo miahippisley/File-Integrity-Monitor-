@@ -82,3 +82,15 @@ snap install powershell --classic
 ```
 
 Once installed, connect to PowerShell using the `pwsh` command.
+
+
+Open the command line and run the `pwsh` command to start PowerShell. Paste in the source code attached. 
+<br/>
+<br/>
+If one selects A, collect new baseline, the programme will go into the files folder, examine all of the text files, and store the file path and file hashes of each text file in a baseline called 'baseline.txt'.
+<br/>
+<br/>
+After creating the baseline, selecting B instructs the programme to begin continuously monitoring the files within the saved baseline. Each loop, the FIM takes the hashes for the baseline created, calculates the hashes for the files, and determines if there is a difference. If the integrity of the files has been compromised, because data has been added, removed, or modified, the FIM sends an alert.
+
+
+
