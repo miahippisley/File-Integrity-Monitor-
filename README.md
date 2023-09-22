@@ -31,8 +31,54 @@ brew install --cask powershell
 `
 .
 
-You can use 
-`
-pwsh
-`
-to verify this has worked.
+Once installed, connect to PowerShell using the `pwsh` command.
+<br/>
+<br/>
+
+<b>On Windows:</b>
+<br/>
+1. Click the magnifying glass on the taskbar or press Win + S to open the search menu.
+2. Type Command Prompt in the search box at the top.
+3. Select Run as administrator to open Command Prompt with administrative privileges.
+4. Select Yes when the User Account Control (UAC) prompt appears.
+5. Paste the following command in the console and press Enter to view all the available versions of the PowerShell app.
+
+```
+winget search Microsoft.PowerShell
+```
+
+Output:
+
+```
+Name               Id                           Version Source
+--------------------------------------------------------------
+PowerShell         Microsoft.PowerShell         7.3.7.0 winget
+PowerShell Preview Microsoft.PowerShell.Preview 7.4.0.3 winget
+```
+
+<br/>
+
+Install PowerShell or PowerShell Preview using the `id` parameter:
+
+```
+winget install --id Microsoft.Powershell --source winget
+winget install --id Microsoft.Powershell.Preview --source winget
+```
+<br/>
+<br/>
+<b>On Ubuntu:</b>
+<br/>
+<br/>
+Install the Snap package manager using:
+
+```
+apt-get install snap snapd -y
+```
+
+Once installed, you can install PowerShell with:
+
+```
+snap install powershell --classic
+```
+
+Once installed, connect to PowerShell using the `pwsh` command.
