@@ -1,4 +1,4 @@
-<h2>Building a Basic File Integrity Montior</h2>
+<h1>Building a Basic File Integrity Montior</h1>
 
 
 The CIA triad is a model in information security that stands for Confidentiality, Integrity and Availability. It is often thought of as a checklist for evaluating an organization's security. Every time a cyber attack occurs, one of these principles has been broken. Maintaining data integrity is essential to ensure accurate information. Data shown to the public must also maintain integrity to ensure trust. 
