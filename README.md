@@ -101,6 +101,10 @@ Vim fim.ps1
 Paste in the source code attached. 
 <br/>
 <br/>
+The code attached monitors text files in a folder called 'Files', and stores the hashes in a text file called baseline.txt, but the code can be modified to your choosing. Note that if using Windows rather than MacOS, one must use backward slashes in e.g. .\baseline.txt, rather than forward, and you need to include the hardrive when stating the path to your files.
+<br/>
+<br/>
+
 To run the script, using PowerShell, type `./fim.ps1`  into the command line. 
 
 
